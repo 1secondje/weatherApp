@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="reset.css">
+	<title>weatherApp</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="card">
+			<div class="search__block">
+				<input type="text" name="search" class="search__input s20" placeholder="Enter a city">
+				<div class="search__button"><img src="img/search.svg" alt=""></div>
+			</div>
+			<div class="weather__block">
+				<div class="top__weather-block">
+					<div class="top__weather-icon"><img src="img/Cloudy.svg" alt=""></div>
+					<div class="top__weather-flex">
+						<div class="top__weather-location s24"></div>
+						<div class="top__weather-date s24"><span class="weekday"></span>, <span class="date"></span></div>
+					</div>
+				</div>
+				<div class="weather__block-line"></div>
+				<div class="bottom__weather-block">
+					<div class="bottom__weather-left">
+							<div class="bottom__weather-degree"></div>
+							<div class="bottom__weather-change">
+								<div class="celsius active">C</div>
+								<div class="fahrenheit">F</div>
+							</div>
+					</div>
+					<div class="bottom__weather-right">
+						<div class="bottom__weather-flex">
+							<div class="bottom__weather-text s20">Cloudness</div>
+							<div class="bottom__weather-value s20 cloudness"></div>
+						</div>
+						<div class="bottom__weather-flex">
+							<div class="bottom__weather-text s20">Humidity</div>
+							<div class="bottom__weather-value s20 humidity"></div>
+						</div>
+						<div class="bottom__weather-flex">
+							<div class="bottom__weather-text s20">Wind</div>
+							<div class="bottom__weather-value s20 wind"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="nextday__forecast-block">
+				<div class="nextday__forecast"><img src="img/Cloudy.svg" alt=""></div>
+				<div class="nextday__forecast-day s20">Today</div>
+				<div class="nextday__forecast-degree s24">13°</div>
+			</div>
+			<div class="nextday__forecast-block">
+				<div class="nextday__forecast"><img src="img/Rain.svg" alt=""></div>
+				<div class="nextday__forecast-day s20">Sunday</div>
+				<div class="nextday__forecast-degree s24">5°</div>
+			</div>
+			<div class="nextday__forecast-block">
+				<div class="nextday__forecast"><img src="img/Snow.svg" alt=""></div>
+				<div class="nextday__forecast-day s20">Monday</div>
+				<div class="nextday__forecast-degree s24">7°</div>
+			</div>
+			<div class="nextday__forecast-block">
+				<div class="nextday__forecast"><img src="img/Cloudy.svg" alt=""></div>
+				<div class="nextday__forecast-day s20">Tuesday</div>
+				<div class="nextday__forecast-degree s24">10°</div>
+			</div>
+			<div class="nextday__forecast-block">
+				<div class="nextday__forecast"><img src="img/Clear.svg" alt=""></div>
+				<div class="nextday__forecast-day s20">Wednesday</div>
+				<div class="nextday__forecast-degree s24">17°</div>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
