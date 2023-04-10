@@ -14,7 +14,7 @@ const wind = document.querySelector('.wind')
 let today = new Date();
 
 function getLocation(city) {
-	const locationUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}&units=metric`;
+	const locationUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}&units=metric`;
 
 	fetch(locationUrl)
 		.then(response => response.json())
