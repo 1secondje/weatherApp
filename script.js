@@ -63,12 +63,15 @@ function getWeather(lat, lon) {
 				indexDays += 8;
 				daysArr.push(element)
 
-				console.log(data)
 				element.addEventListener('click', function (e) {
-					if (e.target == daysArr[0]) indexDays = 8
-					if (e.target == daysArr[1]) indexDays = 16
-					if (e.target == daysArr[2]) indexDays = 24
-					if (e.target == daysArr[3]) indexDays = 32
+					for (let i = 0; i < daysArr.length; i++) {
+						const currentDay = daysArr[i];
+						const currentChildren = currentDay.children;
+						if (e.target == currentDay || e.target == currentChildren[0] || e.target == currentChildren[1] || e.target == currentChildren[2]) {
+							indexDays = 8 + (i * 8);
+							break;
+						}
+					}
 
 					mainDate.innerHTML = new Intl.DateTimeFormat('en-US', {
 						day: 'numeric',
@@ -78,7 +81,7 @@ function getWeather(lat, lon) {
 						weekday: 'long'
 					}).format(new Date(data.list[indexDays].dt * 1000));
 
-					mainDegree.innerHTML = `${Math.round(data.list[indexDays].main.temp)}°`
+					mainDegree.innerHTML = `${element.children[2].innerHTML}`
 					cloudness.innerHTML = `${data.list[indexDays].clouds.all}%`
 					humidity.innerHTML = `${data.list[indexDays].main.humidity}%`
 					wind.innerHTML = `${data.list[indexDays].wind.speed} km/h`
